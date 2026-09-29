@@ -123,22 +123,7 @@ cd kantar-otomasyonu
 
 Ardından `index.html` dosyasını bir tarayıcıda aç **veya** VS Code [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) eklentisini kullan.
 
-### FTP ile Sunucuya Yükleme
 
-VS Code için [SFTP eklentisini](https://marketplace.visualstudio.com/items?itemName=Natizyskunk.sftp) kullanıyorsanız `.vscode/sftp.json` dosyasını doldurun:
-
-```json
-{
-  "host": "SUNUCU_ADRESI",
-  "username": "FTP_KULLANICI_ADI",
-  "password": "FTP_SIFRE",
-  "remotePath": "/"
-}
-```
-
-> ⚠️ Gerçek FTP bilgilerinizi asla Git'e göndermeyin. `.vscode/sftp.json` `.gitignore` tarafından ignore edilmektedir.
-
----
 
 ## 🔧 Kullanım
 
@@ -193,18 +178,6 @@ graph TD
 ```
 
 > **Not:** Mevcut versiyon saf frontend'dir. Form verileri sayfa yenilendiğinde kaybolur. Backend entegrasyonu için gelecekteki geliştirme planına bakın.
-
----
-
-## 🔮 Gelecek Geliştirmeler
-
-- [ ] **Backend API entegrasyonu** — Node.js / Python (Flask/FastAPI) veya PHP
-- [ ] **Veritabanı bağlantısı** — Tartım kayıtlarının kalıcı tutulması
-- [ ] **Gerçek zamanlı kantar okuması** — WebSocket ile baskül cihazından veri çekme
-- [ ] **Giriş/Çıkış Raporu** — Tarih aralıklı tartım raporu ekranı
-- [ ] **PDF/Excel rapor dışa aktarma**
-- [ ] **Kullanıcı kimlik doğrulama** — Gerçek login sistemi
-- [ ] **Responsive mobil tasarım** iyileştirmeleri
 
 ---
 
