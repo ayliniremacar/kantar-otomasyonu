@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Stok tanım ve kayıt ekleme formu — Dursunoğlu Demir Çelik Kantar Sistemi." />
+  <link rel="stylesheet" href="../assets/css/libs/bootstrap.min.css" />
+  <link rel="stylesheet" href="../assets/css/libs/fontawesome.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <title>Stok Ekle — Dursunoğlu Demir Çelik</title>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <a title="Dursunoğlu Demir Çelik" href="../index.html">
+            <img src="../assets/images/dursunoglu-demir-celik-logo.png" class="logo" alt="Dursunoğlu Demir Çelik Logo">
+          </a>
+        </div>
+        <div class="col-md-6 d-flex justify-content-end align-items-center">
+          <span><i class="fa-solid fa-envelope-open-text header-top-icon-1"></i> info@dursunogludemircelik.com</span>
+          <span><i class="fa-solid fa-headphones header-top-icon-2"></i> 0232 625 10 42</span>
+        </div>
+      </div>
+    </div>
+    <div id="fdeco">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9">
+            <nav class="menu">
+              <ul class="menu-list">
+                <li class="menu-list-item"><a href="../index.html">Ana Sayfa</a></li>
+                <li class="dropdown text-center menu-list-item">
+                  <a href="#">Ayarlar</a>
+                  <div class="menu-dropdown-item">
+                    <ul class="menu-dropdown-bg">
+                      <li><a href="kantar-ayarlari.html">Kantar Ayarları</a></li>
+                      <li><a href="kullanici-ayarlari.html">Kullanıcı Ayarları</a></li>
+                      <li><a href="sirket-bilgileri.html">Diğer Tanımlar</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="dropdown text-center menu-list-item">
+                  <a href="#">Genel</a>
+                  <div class="menu-dropdown-item">
+                    <ul class="menu-dropdown-bg">
+                      <li><a href="cari-ekle.html">Cari Ekle</a></li>
+                      <li><a href="stok-ekle.html">Stok Ekle</a></li>
+                      <li><a href="siparis-ekle.html">Sipariş Ekle</a></li>
+                      <li><a href="arac-ekle.html">Araç Ekle</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <h1>Stok Ekle</h1>
+    <form id="stok-form" class="form-container">
+      <!-- Stok Kodu -->
+      <div class="form-group">
+        <label for="stock-code">Stok Kodu:</label>
+        <input type="text" id="stock-code" name="stock-code" placeholder="Stok Kodu Gir" required>
+      </div>
+
+      <!-- Stok Adı -->
+      <div class="form-group">
+        <label for="stock-name">Stok Adı:</label>
+        <input type="text" id="stock-name" name="stock-name" placeholder="Stok Adı Gir" required>
+      </div>
+
+      <!-- Açıklama -->
+      <div class="form-group">
+        <label for="description">Açıklama:</label>
+        <textarea id="description" name="description" placeholder="Açıklama Gir" rows="4"></textarea>
+      </div>
+
+      <!-- Butonlar -->
+      <div class="form-group button-group">
+        <button type="button" id="delete-btn" class="btn btn-danger">Sil</button>
+        <button type="button" id="edit-btn" class="btn btn-warning">Son Kaydı Düzenle</button>
+        <button type="submit" class="btn btn-primary">Kaydet</button>
+      </div>
+    </form>
+
+    <!-- Başarı mesajı -->
+    <div id="success-msg" class="alert alert-success mt-3" style="display:none;"></div>
+
+    <!-- Kaydedilen Bilgiler Alanı -->
+    <div class="saved-info">
+      <h2>Kayıtlı Stoklar</h2>
+      <div id="saved-data"></div>
+    </div>
+  </div>
+
+  <script src="../assets/js/libs/jquery.min.js"></script>
+  <script src="../assets/js/libs/popper.min.js"></script>
+  <script src="../assets/js/libs/bootstrap.min.js"></script>
+  <script src="../assets/js/libs/fontawesome.min.js"></script>
+  <script src="../assets/js/stock-form.js"></script>
+</body>
+
+</html>

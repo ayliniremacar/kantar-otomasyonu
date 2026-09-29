@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Dursunoğlu Demir Çelik Kantar Otomasyon Sistemi — Araç tartım bilgisi giriş ve yönetim arayüzü." />
+  <link rel="stylesheet" href="assets/css/libs/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/libs/fontawesome.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/libs/swiper-bundle.min.css" />
+  <title>Kantar Bilgi Girişi — Dursunoğlu Demir Çelik</title>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <a title="Dursunoğlu Demir Çelik" href="index.html">
+            <img src="assets/images/dursunoglu-demir-celik-logo.png" class="logo" alt="Dursunoğlu Demir Çelik Logo">
+          </a>
+        </div>
+        <div class="col-md-6 d-flex justify-content-end align-items-center">
+          <span><i class="fa-solid fa-envelope-open-text header-top-icon-1"></i>info@dursunogludemircelik.com</span>
+          <span><i class="fa-solid fa-headphones header-top-icon-2"></i> 0232 625 10 42</span>
+        </div>
+      </div>
+    </div>
+    <div id="fdeco">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9">
+            <nav class="menu">
+              <ul class="menu-list">
+                <li class="menu-list-item"><a href="index.html">Ana Sayfa</a></li>
+                <li class="dropdown text-center menu-list-item">
+                  <a href="#">Ayarlar</a>
+                  <div class="menu-dropdown-item">
+                    <ul class="menu-dropdown-bg">
+                      <li><a href="pages/kantar-ayarlari.html">Kantar Ayarları</a></li>
+                      <li><a href="pages/kullanici-ayarlari.html">Kullanıcı Ayarları</a></li>
+                      <li><a href="pages/sirket-bilgileri.html">Diğer Tanımlar</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="dropdown text-center menu-list-item">
+                  <a href="#">Genel</a>
+                  <div class="menu-dropdown-item">
+                    <ul class="menu-dropdown-bg">
+                      <li><a href="pages/cari-ekle.html">Cari Ekle</a></li>
+                      <li><a href="pages/stok-ekle.html">Stok Ekle</a></li>
+                      <li><a href="pages/siparis-ekle.html">Sipariş Ekle</a></li>
+                      <li><a href="pages/arac-ekle.html">Araç Ekle</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container content-wrapper">
+    <!-- Kantar Bilgi Giriş Formu -->
+    <div class="form-container">
+      <h1>KANTAR BİLGİ GİRİŞ</h1>
+      <form id="weighbridge-entry-form" action="#" method="POST" class="weighbridge-form">
+        <!-- Plaka -->
+        <div class="form-group">
+          <label for="plaka">Plaka:</label>
+          <input type="text" id="plaka" name="plaka" placeholder="Plaka Gir" required>
+        </div>
+
+        <!-- Cari -->
+        <div class="form-group">
+          <label for="cari">Cari:</label>
+          <select id="cari" name="cari" required>
+            <option value="" disabled selected>Cari Seç</option>
+          </select>
+        </div>
+
+        <!-- Stok -->
+        <div class="form-group">
+          <label for="stok">Stok:</label>
+          <select id="stok" name="stok" required>
+            <option value="" disabled selected>Stok Seç</option>
+          </select>
+        </div>
+
+        <!-- Sipariş -->
+        <div class="form-group">
+          <label for="siparis">Sipariş:</label>
+          <select id="siparis" name="siparis">
+            <option value="" disabled selected>Sipariş Seç</option>
+          </select>
+        </div>
+
+        <!-- Sürücü Adı -->
+        <div class="form-group">
+          <label for="surucuAdi">Sürücü Adı:</label>
+          <input type="text" id="surucuAdi" name="surucuAdi" placeholder="Sürücü Adı Gir" required>
+        </div>
+
+        <!-- İrsaliye No -->
+        <div class="form-group">
+          <label for="irsaliyeNo">İrsaliye No:</label>
+          <input type="text" id="irsaliyeNo" name="irsaliyeNo" placeholder="İrsaliye No Gir" required>
+        </div>
+
+        <!-- Tartım Tipi -->
+        <div class="form-group">
+          <label for="tartimTipi">Tartım Tipi:</label>
+          <select id="tartimTipi" name="tartimTipi" required>
+            <option value="giris">Giriş</option>
+            <option value="cikis">Çıkış</option>
+            <option value="harici">Harici</option>
+          </select>
+        </div>
+
+        <!-- Fiyat -->
+        <div class="form-group">
+          <label for="fiyat">Fiyat:</label>
+          <input type="text" id="fiyat" name="fiyat" placeholder="Fiyat Gir" required>
+        </div>
+
+        <!-- Fire -->
+        <div class="form-group">
+          <label for="fire">Fire:</label>
+          <input type="text" id="fire" name="fire" placeholder="Fire Gir" required>
+        </div>
+
+        <!-- TC No -->
+        <div class="form-group">
+          <label for="tcNo">TC No:</label>
+          <input type="text" id="tcNo" name="tcNo" placeholder="TC No Gir" required>
+        </div>
+
+        <!-- Tel No -->
+        <div class="form-group">
+          <label for="telNo">Tel No:</label>
+          <input type="text" id="telNo" name="telNo" placeholder="Tel No Gir" required>
+        </div>
+
+        <!-- Depo -->
+        <div class="form-group">
+          <label for="depo">Depo:</label>
+          <select id="depo" name="depo" required>
+            <option value="">Depo Seç</option>
+            <option value="depo1">Depo 1</option>
+            <option value="depo2">Depo 2</option>
+          </select>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="form-group">
+          <button type="submit" id="weighbridge-submit-btn">Kaydet</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Sağ Taraf Konteyneri — Tartım Bilgileri -->
+    <div class="right-container">
+      <h2>KANTAR TARTIM BİLGİLERİ</h2>
+      <div class="big-weight" id="big-weight">0 kg</div>
+      <div class="weight-info">
+        <label for="first-weighing">1. Tartım Bilgisi:</label>
+        <input type="text" id="first-weighing" placeholder="1. Tartım Bilgisi">
+
+        <label for="second-weighing">2. Tartım Bilgisi:</label>
+        <input type="text" id="second-weighing" placeholder="2. Tartım Bilgisi">
+
+        <label for="net-weighing">Net Tartım:</label>
+        <input type="text" id="net-weighing" placeholder="Net Tartım">
+
+        <button type="button" id="save-weighing">Kaydet</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/libs/jquery.min.js"></script>
+  <script src="assets/js/libs/popper.min.js"></script>
+  <script src="assets/js/libs/bootstrap.min.js"></script>
+  <script src="assets/js/libs/swiper-bundle.min.js"></script>
+  <script src="assets/js/libs/fontawesome.min.js"></script>
+  <script src="assets/js/libs/fancybox.min.js"></script>
+  <script src="assets/js/weighbridge-form.js"></script>
+</body>
+
+</html>

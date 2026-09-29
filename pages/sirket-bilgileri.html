@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Şirket bilgileri tanım ve kayıt formu — Dursunoğlu Demir Çelik Kantar Sistemi." />
+  <link rel="stylesheet" href="../assets/css/libs/bootstrap.min.css" />
+  <link rel="stylesheet" href="../assets/css/libs/fontawesome.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <title>Şirket Bilgileri — Dursunoğlu Demir Çelik</title>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <a title="Dursunoğlu Demir Çelik" href="../index.html">
+            <img src="../assets/images/dursunoglu-demir-celik-logo.png" class="logo" alt="Dursunoğlu Demir Çelik Logo">
+          </a>
+        </div>
+        <div class="col-md-6 d-flex justify-content-end align-items-center">
+          <span><i class="fa-solid fa-envelope-open-text header-top-icon-1"></i> info@dursunogludemircelik.com</span>
+          <span><i class="fa-solid fa-headphones header-top-icon-2"></i> 0232 625 10 42</span>
+        </div>
+      </div>
+    </div>
+    <div id="fdeco">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9">
+            <nav class="menu">
+              <ul class="menu-list">
+                <li class="menu-list-item"><a href="../index.html">Ana Sayfa</a></li>
+                <li class="dropdown text-center menu-list-item">
+                  <a href="#">Ayarlar</a>
+                  <div class="menu-dropdown-item">
+                    <ul class="menu-dropdown-bg">
+                      <li><a href="kantar-ayarlari.html">Kantar Ayarları</a></li>
+                      <li><a href="kullanici-ayarlari.html">Kullanıcı Ayarları</a></li>
+                      <li><a href="sirket-bilgileri.html">Diğer Tanımlar</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="dropdown text-center menu-list-item">
+                  <a href="#">Genel</a>
+                  <div class="menu-dropdown-item">
+                    <ul class="menu-dropdown-bg">
+                      <li><a href="cari-ekle.html">Cari Ekle</a></li>
+                      <li><a href="stok-ekle.html">Stok Ekle</a></li>
+                      <li><a href="siparis-ekle.html">Sipariş Ekle</a></li>
+                      <li><a href="arac-ekle.html">Araç Ekle</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <h1>Şirket Bilgileri</h1>
+    <form id="company-form" class="form-container">
+      <!-- Ana Şirket Adı -->
+      <div class="form-group">
+        <label for="company-name">Ana Şirket Adı:</label>
+        <input type="text" id="company-name" name="company-name" placeholder="Şirket Adı Gir" required>
+      </div>
+
+      <!-- Vergi Dairesi -->
+      <div class="form-group">
+        <label for="tax-office">Vergi Dairesi:</label>
+        <input type="text" id="tax-office" name="tax-office" placeholder="Vergi Dairesi Gir" required>
+      </div>
+
+      <!-- Vergi No -->
+      <div class="form-group">
+        <label for="tax-number">Vergi No:</label>
+        <input type="text" id="tax-number" name="tax-number" placeholder="Vergi No Gir" required>
+      </div>
+
+      <!-- Şirket Adresi -->
+      <div class="form-group">
+        <label for="company-address">Şirket Adresi:</label>
+        <textarea id="company-address" name="company-address" placeholder="Şirket Adresi Gir" rows="3" required></textarea>
+      </div>
+
+      <!-- İl -->
+      <div class="form-group">
+        <label for="city">İl:</label>
+        <input type="text" id="city" name="city" placeholder="İl Gir" required>
+      </div>
+
+      <!-- İlçe -->
+      <div class="form-group">
+        <label for="district">İlçe:</label>
+        <input type="text" id="district" name="district" placeholder="İlçe Gir" required>
+      </div>
+
+      <!-- Telefon -->
+      <div class="form-group">
+        <label for="phone">Telefon:</label>
+        <input type="text" id="phone" name="phone" placeholder="Telefon Gir" required>
+      </div>
+
+      <!-- Faks -->
+      <div class="form-group">
+        <label for="fax">Faks:</label>
+        <input type="text" id="fax" name="fax" placeholder="Faks Gir">
+      </div>
+
+      <!-- Eposta -->
+      <div class="form-group">
+        <label for="email">Eposta:</label>
+        <input type="email" id="email" name="email" placeholder="Eposta Gir" required>
+      </div>
+
+      <!-- Butonlar -->
+      <div class="form-group button-group">
+        <button type="button" id="company-delete-btn" class="btn btn-danger">Sil</button>
+        <button type="button" id="company-edit-btn" class="btn btn-warning">Düzenle</button>
+        <button type="submit" class="btn btn-primary">Kaydet</button>
+      </div>
+    </form>
+
+    <!-- Kaydedilen Bilgiler Alanı -->
+    <div class="saved-info">
+      <h2>Kaydedilen Şirket Bilgileri</h2>
+      <div id="saved-data"></div>
+    </div>
+  </div>
+
+  <script src="../assets/js/libs/jquery.min.js"></script>
+  <script src="../assets/js/libs/popper.min.js"></script>
+  <script src="../assets/js/libs/bootstrap.min.js"></script>
+  <script src="../assets/js/libs/fontawesome.min.js"></script>
+  <script src="../assets/js/company-form.js"></script>
+</body>
+
+</html>

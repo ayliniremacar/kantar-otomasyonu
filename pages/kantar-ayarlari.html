@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Kantar cihazı seri port ve iletişim ayarları — Dursunoğlu Demir Çelik Kantar Sistemi." />
+  <link rel="stylesheet" href="../assets/css/libs/bootstrap.min.css" />
+  <link rel="stylesheet" href="../assets/css/libs/fontawesome.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <title>Kantar Ayarları — Dursunoğlu Demir Çelik</title>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <a title="Dursunoğlu Demir Çelik" href="../index.html">
+            <img src="../assets/images/dursunoglu-demir-celik-logo.png" class="logo" alt="Dursunoğlu Demir Çelik Logo">
+          </a>
+        </div>
+        <div class="col-md-6 d-flex justify-content-end align-items-center">
+          <span><i class="fa-solid fa-envelope-open-text header-top-icon-1"></i> info@dursunogludemircelik.com</span>
+          <span><i class="fa-solid fa-headphones header-top-icon-2"></i> 0232 625 10 42</span>
+        </div>
+      </div>
+    </div>
+    <div id="fdeco">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9">
+            <nav class="menu">
+              <ul class="menu-list">
+                <li class="menu-list-item"><a href="../index.html">Ana Sayfa</a></li>
+                <li class="dropdown text-center menu-list-item">
+                  <a href="#">Ayarlar</a>
+                  <div class="menu-dropdown-item">
+                    <ul class="menu-dropdown-bg">
+                      <li><a href="kantar-ayarlari.html">Kantar Ayarları</a></li>
+                      <li><a href="kullanici-ayarlari.html">Kullanıcı Ayarları</a></li>
+                      <li><a href="sirket-bilgileri.html">Diğer Tanımlar</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="dropdown text-center menu-list-item">
+                  <a href="#">Genel</a>
+                  <div class="menu-dropdown-item">
+                    <ul class="menu-dropdown-bg">
+                      <li><a href="cari-ekle.html">Cari Ekle</a></li>
+                      <li><a href="stok-ekle.html">Stok Ekle</a></li>
+                      <li><a href="siparis-ekle.html">Sipariş Ekle</a></li>
+                      <li><a href="arac-ekle.html">Araç Ekle</a></li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container kantar-settings-container">
+    <h1>Kantar Ayarları</h1>
+    <form id="kantar-settings-form" action="#" method="POST" class="kantar-form">
+      <!-- Kantar Adı -->
+      <div class="form-group">
+        <label for="kantar-name">Kantar Adı:</label>
+        <input type="text" id="kantar-name" name="kantar-name" placeholder="Kantar Adı Gir" required>
+      </div>
+
+      <!-- Seri No -->
+      <div class="form-group">
+        <label for="serial-no">Seri No:</label>
+        <input type="text" id="serial-no" name="serial-no" placeholder="Seri No Gir" required>
+      </div>
+
+      <!-- Seri Port -->
+      <div class="form-group">
+        <label for="serial-port">Seri Port:</label>
+        <select id="serial-port" name="serial-port" required>
+          <option value="" disabled selected>Seri Port Seç</option>
+          <option value="COM1">COM1</option>
+          <option value="COM2">COM2</option>
+          <option value="COM3">COM3</option>
+          <option value="USB1">USB1</option>
+          <option value="USB2">USB2</option>
+          <option value="USB3">USB3</option>
+        </select>
+      </div>
+
+      <!-- Data Bits -->
+      <div class="form-group">
+        <label for="data-bits">Data/Bits:</label>
+        <select id="data-bits" name="data-bits" required>
+          <option value="" disabled selected>Data Bits Seç</option>
+          <option value="2 bit">2 bit</option>
+          <option value="4 bit">4 bit</option>
+          <option value="6 bit">6 bit</option>
+          <option value="7 bit">7 bit</option>
+          <option value="8 bit">8 bit</option>
+        </select>
+      </div>
+
+      <!-- Baud Rate -->
+      <div class="form-group">
+        <label for="baud-rate">Baud Rate:</label>
+        <select id="baud-rate" name="baud-rate" required>
+          <option value="" disabled selected>Baud Rate Seç</option>
+          <option value="600">600</option>
+          <option value="1200">1200</option>
+          <option value="2400">2400</option>
+          <option value="4800">4800</option>
+          <option value="9600">9600</option>
+          <option value="14400">14400</option>
+          <option value="19200">19200</option>
+          <option value="38400">38400</option>
+          <option value="56000">56000</option>
+          <option value="57600">57600</option>
+          <option value="115200">115200</option>
+        </select>
+      </div>
+
+      <!-- Butonlar -->
+      <div class="form-group button-group">
+        <button type="reset" class="btn btn-danger">Temizle</button>
+        <button type="submit" class="btn btn-primary">Kaydet</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="../assets/js/libs/jquery.min.js"></script>
+  <script src="../assets/js/libs/popper.min.js"></script>
+  <script src="../assets/js/libs/bootstrap.min.js"></script>
+  <script src="../assets/js/libs/fontawesome.min.js"></script>
+</body>
+
+</html>
